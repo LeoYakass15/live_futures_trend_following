@@ -1,6 +1,6 @@
 # Live track record, week by week
 
-Paper book of 10,000,000 USD, rules in [RULES.md](RULES.md), first positions on Monday
+Paper book of 1,000,000 USD, rules in [RULES.md](RULES.md), first positions on Monday
 30 November 2026. Long the futures that went up over the past 12 months, short the ones that
 went down. Positions change once a month, after the last Friday. The newest entry is on top.
 
@@ -18,16 +18,16 @@ Monday 9:00 Paris time.
 
 | Market | Asset class | 12-month return | Position | Weight (% of NAV) | Notional (USD) |
 |---|---|---|---|---|---|
-| S&P 500 | Equity | +7.2% | **Long** | +27% | +2,700,000 |
-| Euro Stoxx 50 | Equity | +8.2% | **Long** | +27% | +2,700,000 |
-| US 10Y Treasury | Bond | -4.8% | **Short** | -71% | -7,100,000 |
-| German Bund | Bond | -4.3% | **Short** | -67% | -6,700,000 |
-| EUR/USD | FX | -4.7% | **Short** | -46% | -4,600,000 |
-| JPY/USD | FX | -5.1% | **Short** | -41% | -4,100,000 |
-| WTI crude oil | Commodity | +124.5% | **Long** | +7% | +700,000 |
-| Gold | Commodity | -6.6% | **Short** | -16% | -1,600,000 |
+| S&P 500 | Equity | +7.2% | **Long** | +27% | +270,000 |
+| Euro Stoxx 50 | Equity | +8.2% | **Long** | +27% | +270,000 |
+| US 10Y Treasury | Bond | -4.8% | **Short** | -71% | -710,000 |
+| German Bund | Bond | -4.3% | **Short** | -67% | -670,000 |
+| EUR/USD | FX | -4.7% | **Short** | -46% | -460,000 |
+| JPY/USD | FX | -5.1% | **Short** | -41% | -410,000 |
+| WTI crude oil | Commodity | +124.5% | **Long** | +7% | +70,000 |
+| Gold | Commodity | -6.6% | **Short** | -16% | -160,000 |
 
-Gross exposure about 30,000,000 USD (3.0x NAV): bonds and FX are calm, so they get big
+Gross exposure about 3,000,000 USD (3.0x NAV): bonds and FX are calm, so they get big
 notionals; oil is very volatile, so it gets a small one. Each market brings the same risk.
 
 **Letter to investors, November 2026.** The book starts long equities and oil, and short

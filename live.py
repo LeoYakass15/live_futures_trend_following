@@ -17,7 +17,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import backtest as bt
 
-CAPITAL = 10_000_000      # paper capital in USD
+CAPITAL = 1_000_000       # paper capital in USD
 PRICES = "data/bloomberg/live/friday_prices.csv"
 POSITIONS = "results/positions_live.csv"
 PNL = "results/live_pnl.csv"
@@ -118,13 +118,14 @@ def live_chart(hist):
     """Live P&L against what the backtest expects (mean and 1 and 2 standard deviations)."""
     bt_pnl = pd.read_csv("results/monthly_pnl.csv", index_col=0)["pnl"]
     mu, sigma = bt_pnl.mean() * 12 / 52, bt_pnl.std() * np.sqrt(12) / np.sqrt(52)
-    weeks = np.arange(0, len(hist) + 1)
+    weeks = np.arange(0, max(52, len(hist)) + 1)          # the cone covers the first year
+    live = np.r_[0, hist.cumulative.values] if len(hist) else np.array([0.0])
     plt.figure(figsize=(8, 4))
     for k, a in [(2, 0.12), (1, 0.25)]:
         plt.fill_between(weeks, mu * weeks - k * sigma * np.sqrt(weeks), mu * weeks + k * sigma * np.sqrt(weeks),
                          color="tab:blue", alpha=a, lw=0)
     plt.plot(weeks, mu * weeks, color="tab:blue", ls="--", label="Backtest expectation (1 and 2 std)")
-    plt.plot(weeks, np.r_[0, hist.cumulative.values], color="black", lw=2, marker="o", label="Live")
+    plt.plot(np.arange(len(live)), live, color="black", lw=2, marker="o", label="Live")
     plt.axhline(0, color="grey", lw=0.8)
     plt.xlabel("Weeks since launch"); plt.ylabel("Cumulative return"); plt.legend(loc="upper left")
     plt.title("Live vs backtest"); plt.tight_layout(); plt.savefig("results/5_live_vs_backtest.png", dpi=120)
@@ -132,7 +133,9 @@ def live_chart(hist):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "positions":
+    if len(sys.argv) > 1 and sys.argv[1] == "chart":         # empty cone before the first week
+        live_chart(pd.DataFrame({"cumulative": []}))
+    elif len(sys.argv) > 1 and sys.argv[1] == "positions":
         new_positions()
     else:
         weekly_pnl()
