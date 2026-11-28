@@ -126,7 +126,28 @@ US 10Y, gold and the Bund. EUR/USD barely contributes.
 
 Covid is the exception. The crash took four weeks, faster than a 12-month signal can turn.
 
-## 7. Live track record
+## 7. Robustness: six markets I did not use
+
+A rule can fit its own 8 markets by chance. So I take the same frozen rule, with no change,
+to 6 markets that were never in the universe: FTSE 100, Nikkei 225, UK Gilt, JGB, GBP/USD
+and AUD/USD (Bloomberg, 1996-2026, same roll method).
+
+| Universe | Sharpe 1999-2015 | Sharpe 2016-2026 | Sharpe full | Max drawdown |
+|---|---|---|---|---|
+| Original 8 markets | 0.86 | 0.29 | 0.64 | -28% |
+| **6 new markets only** | **0.66** | **0.22** | **0.48** | -23% |
+| All 14 markets | 0.85 | 0.31 | 0.64 | -19% |
+
+![Robustness](results/6_robustness.png)
+
+The new markets alone earn a Sharpe of 0.66 before 2016 (t = 2.7), with the same pattern
+after: a weaker decade. The edge is not a property of my 8 markets. All six make money on
+their own (Sharpe 0.05 for GBP/USD to 0.37 for the Gilt). Adding them to the book does not
+raise the Sharpe much, because the new markets are close cousins of the old ones (FTSE and
+Nikkei move with the S&P, the Gilt with the Bund). It does cut the worst drawdown from
+-28% to -19%. The live book stays on the 8 original markets: its rules were frozen first.
+
+## 8. Live track record
 
 The rules are frozen in [RULES.md](RULES.md) and published before the first trade. Every
 Friday I take the Bloomberg prices. Over the weekend I compute the P&L of the week. Before
@@ -141,9 +162,9 @@ letter to investors.
 | NAV (start 1,000,000 USD) | - |
 | Worst week | - |
 
-**First positions** (traded on Monday 30 November 2026): computed from the prices of Friday
-27 November. The signal at the end of October points to long S&P 500, Euro Stoxx 50 and
-oil; short US 10Y, Bund, EUR/USD, JPY/USD and gold.
+**First positions** (Monday 30 November 2026, from the prices of Friday 27 November): long
+S&P 500, Euro Stoxx 50 and oil; short US 10Y, Bund, EUR/USD, JPY/USD and gold. Gross
+exposure 3.05x NAV. Details in [LIVE.md](LIVE.md).
 
 ![Live vs backtest](results/5_live_vs_backtest.png)
 
@@ -158,6 +179,7 @@ The real question is whether the live P&L stays inside the range the backtest ex
 ```
 pip install -r requirements.txt
 python backtest.py              # backtest, statistics and charts in results/
+python robustness.py            # same rule on 6 extra markets (section 7)
 python live.py positions        # last weekend of the month: next positions
 python live.py week             # every weekend: P&L of the week
 ```

@@ -10,29 +10,30 @@ went down. Positions change once a month, after the last Friday. The newest entr
 
 ---
 
-## Pre-launch: positions for Monday 30 November 2026
+## Positions from Monday 30 November 2026 (final)
 
-Signal shown here: 12-month return at the end of October 2026 (provisional). The final
-positions use the Bloomberg prices of Friday 27 November 2026 and are published before
-Monday 9:00 Paris time.
+Signal: 12-month return to Friday 27 November 2026, Bloomberg prices of the 1st and 2nd
+contract. Committed before Monday 9:00 Paris time. Held until the last Friday of December.
 
 | Market | Asset class | 12-month return | Position | Weight (% of NAV) | Notional (USD) |
 |---|---|---|---|---|---|
-| S&P 500 | Equity | +7.2% | **Long** | +27% | +270,000 |
-| Euro Stoxx 50 | Equity | +8.2% | **Long** | +27% | +270,000 |
-| US 10Y Treasury | Bond | -4.8% | **Short** | -71% | -710,000 |
-| German Bund | Bond | -4.3% | **Short** | -67% | -670,000 |
-| EUR/USD | FX | -4.7% | **Short** | -46% | -460,000 |
-| JPY/USD | FX | -5.1% | **Short** | -41% | -410,000 |
-| WTI crude oil | Commodity | +124.5% | **Long** | +7% | +70,000 |
-| Gold | Commodity | -6.6% | **Short** | -16% | -160,000 |
+| S&P 500 | Equity | +3.1% | **Long** | +27% | +270,000 |
+| Euro Stoxx 50 | Equity | +7.2% | **Long** | +27% | +267,000 |
+| US 10Y Treasury | Bond | -5.4% | **Short** | -71% | -713,000 |
+| German Bund | Bond | -3.4% | **Short** | -70% | -704,000 |
+| EUR/USD | FX | -7.2% | **Short** | -46% | -461,000 |
+| JPY/USD | FX | -5.0% | **Short** | -42% | -415,000 |
+| WTI crude oil | Commodity | +88.9% | **Long** | +7% | +67,000 |
+| Gold | Commodity | -17.4% | **Short** | -15% | -152,000 |
 
-Gross exposure about 3,000,000 USD (3.0x NAV): bonds and FX are calm, so they get big
+Gross exposure about 3,050,000 USD (3.05x NAV): bonds and FX are calm, so they get big
 notionals; oil is very volatile, so it gets a small one. Each market brings the same risk.
+All eight signals are the same as the provisional end-October signal.
 
 **Letter to investors, November 2026.** The book starts long equities and oil, and short
 bonds, the euro, the yen and gold. It is a bet that the 2026 trends continue: rising rates,
-a strong dollar, strong stocks. The main risk is a reversal on rates: if bonds rally sharply,
+a strong dollar, strong stocks. November already tested two of them: oil fell about 19% and
+the S&P about 4%, but both 12-month trends are still up, so the positions stay. The main risk is a reversal on rates: if bonds rally sharply,
 the two bond shorts, our biggest positions, lose together. Expected Sharpe from the backtest:
 0.3 to 0.7, with long flat periods like 2016-2021. The goal is a live record that matches
 that forecast.

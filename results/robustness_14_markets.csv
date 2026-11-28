@@ -1,0 +1,10 @@
+Universe,Period,Sharpe,t-stat,Max drawdown
+Original 8 markets,In-sample 1999-2015,0.863,3.565,-0.112
+Original 8 markets,Out-of-sample 2016-2026,0.286,0.942,-0.245
+Original 8 markets,Full 1999-2026,0.641,3.386,-0.282
+6 new markets only,In-sample 1999-2015,0.66,2.728,-0.157
+6 new markets only,Out-of-sample 2016-2026,0.224,0.736,-0.234
+6 new markets only,Full 1999-2026,0.484,2.557,-0.234
+All 14 markets,In-sample 1999-2015,0.853,3.527,-0.125
+All 14 markets,Out-of-sample 2016-2026,0.311,1.023,-0.193
+All 14 markets,Full 1999-2026,0.641,3.388,-0.193
